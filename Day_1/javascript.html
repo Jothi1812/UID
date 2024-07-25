@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"> </p>
+    <script>
+        class Student {
+            constructor(name, rollno, address, mobileno) {
+                this.name = name;
+                this.rollno = rollno;
+                this.address = address;
+                this.mobileno = mobileno;
+            }
+        }
+
+        const details = new Student("Jothi", "22ITR038", 'Gobi', 9345527195);
+
+        let output = `
+           <b> Name:</b>${details.name}<br>
+           <b> Roll No:</b> ${details.rollno}<br>
+           <b> Address:</b> ${details.address}<br>
+           <b> Mobile No:</b> ${details.mobileno}
+        `;
+    
+        document.getElementById('demo').innerHTML = output;
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+
+    <br><br>
+
+    Name:
+    <input type="text" name="name" id="name">
+    <br>
+    Rollno:
+    <input type="text" name="rollno" id="rollno">
+    <br>
+    Address:
+    <input type="text" name="address" id="address">
+    <br>
+    CGPA:
+    <input type="text" name="cgpa" id="cgpa">
+    <br>
+    <br>
+    <button onclick="display()">Display</button>
+
+    <p id="o1"></p>
+    <p id="o2"></p>
+    <p id="o3"></p>
+    <p id="o4"></p>
+
+    
+    <script>
+        class student{
+            constructor(name,roll,address,CGPA){
+            this.name=name;
+            this.roll=roll;
+            this.address=address;
+            this.CGPA=CGPA;
+        }
+    }
+        function display(){
+
+        name = document.getElementById('name').value;
+        roll = document.getElementById('rollno').value;
+        address = document.getElementById('address').value;
+        CGPA =parseFloat(document.getElementById('cgpa').value);
+        
+        let s1 = new student(name,roll,address,CGPA);
+
+        document.getElementById('o1').innerHTML=`${s1.name} <br>`;
+        document.getElementById('o2').innerHTML=`${s1.roll} <br>`;
+        document.getElementById('o3').innerHTML=`${s1.address} <br>`;
+        document.getElementById('o4').innerHTML=`${s1.CGPA}`;
+        }
+
+        
+    </script>
+</body>
+</html> -->

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><br>
+
+    Name:
+    <input type="text" name="name" id="name">
+    <br>
+    Rollno:
+    <input type="text" name="rollno" id="rollno">
+    <br>
+    Address:
+    <input type="text" name="address" id="address">
+    <br>
+    CGPA:
+    <input type="text" name="cgpa" id="cgpa">
+    <br>
+    <br>
+    <button onclick="addStudent()">Add Student</button>
+    <button onclick="displayStudents()">Display All Students</button>
+
+    <div id="output"></div>
+
+    <script>
+        class Student {
+            constructor(name, rollno, address, mobileno) {
+                this.name = name;
+                this.rollno = rollno;
+                this.address = address;
+                this.mobileno = mobileno;
+            }
+        }
+
+        let students = []; 
+
+function addStudent() {
+    let name = document.getElementById('name').value;
+    let roll = document.getElementById('rollno').value;
+    let address = document.getElementById('address').value;
+    let cgpa = parseFloat(document.getElementById('cgpa').value);
+    
+    let s1 = new Student(name, roll, address, cgpa);
+    students.push(s1); 
+    
+    document.getElementById('name').value = '';
+    document.getElementById('rollno').value = '';
+    document.getElementById('address').value = '';
+    document.getElementById('cgpa').value = '';
+}    
+
+function displayStudents() {
+            let outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = ''; // Clear previous output
+
+            students.forEach((student, index) => {
+                let studentInfo = `                 
+                    <p>Student ${index + 1}:</p>
+                    <p>Name: ${student.name}</p>
+                    <p>Roll No: ${student.roll}</p>
+                    <p>Address: ${student.address}</p>
+                    <p>CGPA: ${student.cgpa}</p>
+                    <br>
+                `;
+                outputDiv.innerHTML += studentInfo;
+            });
+        }
+      
+    </script>
+</body>
+</html>
