@@ -1,0 +1,1 @@
+A simple e-commerce website with minimum of three pages. Use React Router to implement routing between these pages..
