@@ -1,0 +1,1 @@
+A weather application that displays the weather forecast for a specific location
