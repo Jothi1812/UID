@@ -1,0 +1,2 @@
+A form that allows users to add new items to a list. 
+The form that include fields for the name, description and quantity of the item.
