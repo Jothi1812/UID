@@ -1,0 +1,109 @@
+/* App.css */
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes full height */
+}
+
+header {
+  position: sticky; /* Make header sticky */
+  top: 0;           /* Stick to the top */
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  z-index: 1000;   /* Ensure it's above other content */
+}
+
+main {
+  flex: 1; /* Allow main to take remaining space */
+  padding: 20px;
+}
+
+footer {
+  position: fixed;  /* Make footer fixed */
+  bottom: 0;        /* Stick to the bottom */
+  left: 0;          /* Align with left side */
+  width: 100%;      /* Full width */
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+.header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+
+
+.product-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+/* ... other styles ... */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  padding: 10px 20px;
+}
+
+.header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header input {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+/* Add styles for the search input */
+input[type="text"] {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px; /* Set a maximum width */
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus {
+  border: 1px solid #007bff; /* Change border color on focus */
+  outline: none; /* Remove outline */
+}
